@@ -42,6 +42,10 @@ public class BankAccount {
 
     }
 
+    public ArrayList<Customer> getHolderList() {
+        return holderList;
+    }
+
     public int addAccountHolder(Customer accountHolder){
         //check if Customer is already on account
         if(holderList.contains(accountHolder)){
@@ -53,4 +57,17 @@ public class BankAccount {
         }
         return 1;
     }
+
+    public int removeAccountHolder(Customer accountHolder){
+        if(holderList.remove(accountHolder)){
+            //remove was successful
+            return 1;
+        }
+        else {
+            //remove was unsuccessful (this Customer was not on the holderList)
+            return -1;
+        }
+    }
+
+
 }
