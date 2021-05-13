@@ -1,4 +1,4 @@
-package main;
+package zero;
 
 import java.util.Objects;
 
@@ -9,7 +9,15 @@ public class Customer {
     private String lastName;
 
 
-    Customer(String first, String last){
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public Customer(String first, String last){
         this.firstName = first;
         this.lastName = last;
     }
